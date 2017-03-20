@@ -1,0 +1,11 @@
+{
+  "name":"AngularJS-D3",
+  "description":"AngularJS-D3",
+  "version":"0.0.1",
+  "dependencies": {
+    "angular":"latest",
+    "angular-mocks":"latest",
+    "d3":"latest",
+    "sanitize-css":"latest"
+  }
+}
