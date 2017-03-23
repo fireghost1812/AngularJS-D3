@@ -1,12 +1,24 @@
 {
   "name": "AngularJS-D3",
   "version": "0.0.1",
-  "main":"server.js",
+  "main": "server.js",
   "dependencies": {
-    "express":"latest",
-    "pug":"latest"
+    "express": "latest",
+    "pug": "latest"
   },
   "devDependencies": {
-
+    "gulp": "latest",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "latest",
+    "browser-sync":"latest",
+    "browserify":"latest",
+    "vinyl-source-stream":"latest",
+    "gulp-plumber":"latest",
+    "gulp-notify": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-autoprefixer": "latest"
+  },
+  "scripts": {
+    "gulp": "gulp"
   }
 }
