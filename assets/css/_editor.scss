@@ -1,6 +1,21 @@
-body{
-  background: green;
-  display: flex;
-  flex-grow: 1;
-  transition: all .3s ease;
+#container{
+  position: fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+
+  .kit-editor{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    #svg-editor{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+svg .underlay{
+  fill:none;
+  pointer-events: all;
 }
