@@ -57,13 +57,13 @@ gulp.task('watch',function () {
     'css/*',
     'css/**/*',
     'css/**/*.scss'
-  ],{cwd: './assets'},['css'])
-    .on('change',browserSync.reload);
+  ],{cwd: './assets'},['css'],browserSync.reload);
+  //.on('change',browserSync.reload);
 
   gulp.watch([
       'js/*',
       'js/**/*',
       'js/**/*.js'
-    ],{cwd: './assets'},['js'])
-    .on('change',browserSync.reload);
+    ],{cwd: './assets'},['js'],browserSync.reload);
+    //.on('change',browserSync.reload);
 });

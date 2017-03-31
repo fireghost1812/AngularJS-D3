@@ -23,7 +23,9 @@ class Server{
           :0
       }));
       this.app.use('/vendor',this.express.static(path.join(__dirname,'vendor'),{
-        maxAge:31536000
+        maxAge:this.env==='production'
+          ?31536000
+          :0
       }));
 
 

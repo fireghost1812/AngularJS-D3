@@ -4,3 +4,13 @@
   stroke-width: 1.5;
   pointer-events: none;
 }
+g.axis{
+  pointer-events: none;
+
+  line{
+    fill:none;
+    stroke: #ddd;
+    shape-rendering:crispEdges;
+    vector-effect: non-scaling-stroke;
+  }
+}
