@@ -20,3 +20,18 @@ svg .underlay{
   fill:none;
   pointer-events: all;
 }
+.kit-editor button {
+  background: gray;
+  border-radius: 50%;
+  border: 0;
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  top:1em;
+  right:1em;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  padding: 2px;
+  opacity: 0.0;
+}

@@ -1,12 +1,20 @@
 module.exports = ['d3Factory',
-  '$q','$rootScope','$window',
-  function (d3Factory,$q,$rootScope,$window) {
+  '$q',
+  '$rootScope',
+  '$window',
+  '$compile',
+  function (d3Factory,$q,$rootScope,$window,$compile) {
     //DDO -directive definition object
     return {
       scope:true,
       restrict:'A',
       link:function($scope,$element,$attrs){
         d3Factory.then(function (d3) {
+
+          d3.select('button')
+            .transition()
+            .duration(1000)
+            .style('opacity',1);
 
           /**
            * Перемещение рабочей области в заданную точку
@@ -67,9 +75,12 @@ module.exports = ['d3Factory',
           };
 
 
+          $scope.value = 'C';
 
           $scope.editor = {
-            behavior:{},
+            behavior:{
+              draqqing:false
+            },
             grid:{
               sizeXMm:5,
               sizeYMm:5
@@ -187,7 +198,10 @@ module.exports = ['d3Factory',
             console.log(message);
           })
 
-
+          //принимает
+          $compile(angular.element($scope.editor.svg.container.append('g')
+            .attr('transform', 'translate(0,0)')
+            .attr('data-kit-custom-shape','').node()))($scope);
 
         });/*.catch(function (error) {
           *console.log(`Have an error =>${error}`);
